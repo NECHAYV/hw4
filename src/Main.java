@@ -1,5 +1,6 @@
 public class Main {
     public static void main(String[] args) {
+
         int os = 3;
         if (os == 0) {
             System.out.println("Установите версию приложения для OS");
