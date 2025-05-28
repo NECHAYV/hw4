@@ -1,73 +1,45 @@
 public class Main {
     public static void main(String[] args) {
+        for (int o = 0; o < 17; o = o + 2) {
+            System.out.println(o);
+        }
+        for (int i = 0; i <= 10; i = i + 1) {
+            System.out.println(i);
+        }
+        for (int u = 10; u >= 0; u = u - 1) {
+            System.out.println(u);
+        }
+        for (int p = 10; p >= -10; p = p - 1 ) {
+            System.out.println(p);
+        }
+        for (int year = 1904; year <= 2096; year = year + 4) {
+            System.out.println(year);
+        }
+        for (int number = 7; number <= 98; number = number + 7) {
+            System.out.println(number);
+        }
+        for (int chislo = 1; chislo <= 512; chislo = chislo * 2) {
+            System.out.println(chislo);
+        }
+        int monthlySavings = 29000;
+        int totalSavings = 0;
 
-        int os = 3;
-        if (os == 0) {
-            System.out.println("Установите версию приложения для OS");
-        } else if (os == 1) {
-            System.out.println("Установите версию приложения для Android по ссылке");
-        } else {
-            System.out.println("Такого значения нет");
+        for (int month = 1; month <= 12; month++) {
+            totalSavings += monthlySavings;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + totalSavings + " рублей");
         }
-        os = 0;
-        int clientDeviceYear = 2016;
-        if (os == 0 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        } else if (os == 0 && clientDeviceYear > 2015) {
-            System.out.println("Установите обычную версию приложения для iOS по ссылке");
-        } else if (os == 1 && clientDeviceYear < 2015) {
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (os == 1 && clientDeviceYear > 2015) {
-            System.out.println("Установите обычную версию приложения для Android по ссылке");
-        }
-        int year = 10000;
-        int firstYear = 1584;
-        if (year >= firstYear && year % 4 == 0 || year % 100 != 0 && year % 400 == 0) {
-            System.out.println("год високосный ");
-        } else {
-            System.out.println(" год не високосный ");
-        }
-        int deliveryDistance = 95;
-        int days;
-        if (deliveryDistance <= 20) {
-            days = 1;
-        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
-            days = 2;
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            days = 3;
-        } else {
-            days = -1;
-        }
+        int monthlysavings = 29000;
+        double totalsavings = 0;
+        double monthlyInterestRate = 0.12 / 12;
 
-        if (days != 1) {
-            System.out.println("Потребуется дней" + days);
-        } else {
-            System.out.println("Доставки нет");
+        for (int month = 1; month <= 12; month++) {
+            totalsavings = (totalsavings + monthlysavings) * (1 + monthlyInterestRate);
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + (int) totalsavings + " рублей");
         }
-        int monthNumber = 5;
-        switch (monthNumber) {
-            case 12:
-            case 1:
-            case 2:
-                System.out.println("Сейчас зима");
-                break;
-            case 3:
-            case 4:
-            case 5:
-                System.out.println("Сейчас весна");
-                break;
-            case 6:
-            case 7:
-            case 8:
-                System.out.println("Сейчас лето");
-                break;
-            case 9:
-            case 10:
-            case 11:
-                System.out.println("Сейчас осень");
-                break;
-            default:
-                System.out.println("Неизвестный номер");
+        int multiplier = 2;
+        for (int i = 1; i <= 10; i++) {
+            int result = multiplier * i;
+            System.out.println(multiplier + "*" + i + "=" + result);
         }
     }
 }
