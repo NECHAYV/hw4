@@ -1,45 +1,81 @@
 public class Main {
     public static void main(String[] args) {
-        for (int o = 0; o < 17; o = o + 2) {
-            System.out.println(o);
+        int iWantSum = 2_459_000;
+        int sum = 0;
+        int quantity = 15000;
+        double percent = 1D / 100;
+        int month = 0;
+        while (sum < iWantSum) {
+            sum += quantity;
+            sum = (int) (sum * (1 + percent));
+            month++;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
         }
-        for (int i = 0; i <= 10; i = i + 1) {
-            System.out.println(i);
+        int i = 1;
+        while (i <= 10) {
+            System.out.print(i + " ");
+            i++;
         }
-        for (int u = 10; u >= 0; u = u - 1) {
-            System.out.println(u);
+        System.out.println();
+        for (int j = 10; j >= 1; j--) {
+            System.out.print(j + " ");
         }
-        for (int p = 10; p >= -10; p = p - 1 ) {
-            System.out.println(p);
+        int population = 12_000_000;
+        int fertilityPerThousand = 17;
+        int mortalityPerThousand = 8;
+        int currentYear = 2024;
+        for (int year = currentYear; year < currentYear + 10; year++) {
+            population += population * fertilityPerThousand / 1000 - population * mortalityPerThousand / 1000;
+            System.out.println("Год " + year + ", численность населения составляет " + population);
         }
-        for (int year = 1904; year <= 2096; year = year + 4) {
-            System.out.println(year);
+        percent = 7D / 100;
+        iWantSum = 12_000_000;
+        sum = quantity;
+        month = 0;
+        while (sum < iWantSum) {
+            sum = (int) (sum * (1 + percent));
+            month++;
+            System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
         }
-        for (int number = 7; number <= 98; number = number + 7) {
-            System.out.println(number);
-        }
-        for (int chislo = 1; chislo <= 512; chislo = chislo * 2) {
-            System.out.println(chislo);
-        }
-        int monthlySavings = 29000;
-        int totalSavings = 0;
+        sum = quantity;
+        month = 0;
+        while (sum < iWantSum) {
+            sum = (int) (sum * (1 + percent));
+            month++;
+            if (month % 6 == 0) {
+                System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
+            }
+            sum = quantity;
+            month = 0;
+            int months = 12 * 9;
+            while (month < months) {
+                sum = (int) (sum * (1 + percent));
+                month++;
+                if (month % 6 == 0) {
+                    System.out.println("Месяц " + month + ", сумма накоплений равна " + sum + " рублей");
+                }
 
-        for (int month = 1; month <= 12; month++) {
-            totalSavings += monthlySavings;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + totalSavings + " рублей");
+            }
         }
-        int monthlysavings = 29000;
-        double totalsavings = 0;
-        double monthlyInterestRate = 0.12 / 12;
-
-        for (int month = 1; month <= 12; month++) {
-            totalsavings = (totalsavings + monthlysavings) * (1 + monthlyInterestRate);
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + (int) totalsavings + " рублей");
+        int firstFriday = 3;
+        for (int day = firstFriday; day <= 31; day += 7) {
+            System.out.println("Сегодня пятница " + day + "-e число. Необходимо подготовить отчет");
         }
-        int multiplier = 2;
-        for (int i = 1; i <= 10; i++) {
-            int result = multiplier * i;
-            System.out.println(multiplier + "*" + i + "=" + result);
+        int period = 79;
+        int startSeeing = 0;
+        int start = currentYear - 200;
+        int end = currentYear + 100;
+        for (int year = startSeeing; year < end; year += period) {
+            if (year > start) {
+                System.out.println(year);
+            }
         }
     }
 }
+
+
+
+
+
+
+
